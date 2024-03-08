@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    background-color: hsl(0, 100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text {
+    z-index: 1;
+    width: 40%;
+    padding: 5rem;
+}
+
+.text h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+    margin: 2rem 0;
+}
+
+.text p {
+    color: hsl(270, 7%, 64%);
+    line-height: 1.5rem;
+}
+
+.phone {
+    position: relative;
+    width: 420px;
+    height: fit-content;
+    aspect-ratio: 1/2.05;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 50px;
+    overflow: hidden;
+    border: 20px solid hsl(0, 100%, 100%);
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(270, 20%, 96%);
+    box-shadow: 5px 15px 60px hsla(0, 0%, 0%, 20%);
+    scale: 60%;
+    margin-left: 7rem;
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        scale: 0%
+    }
+
+    100% {
+        scale: 60%;
+    }
+}
+
+.speaker {
+    position: absolute;
+    width: 50%;
+    height: 30px;
+    background-color: hsl(0, 100%, 100%);
+    transform: translateX(50%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.top {
+    display: flex;
+    background: linear-gradient(90deg,  hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1rem 1rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px hsla(0, 0%, 0%, 20%);
+}
+
+.backandname {
+    display: flex;
+    align-items: center;
+}
+
+.backandname > img {
+    width: 20px;
+    margin-right: .5rem;
+}
+
+.top > img {
+    width: 20px;
+}
+
+.namepanel {
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+}
+
+.namepanel img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: .5rem;
+    border: 2px solid hsl(0, 100%, 100%);
+}
+
+.namepanel h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+p span {
+    color: hsl(276, 100%, 81%);
+}
+
+.messagefield {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.message {
+    padding: .5rem;
+    border-radius: 15px;
+    width: fit-content;
+    margin: .5rem;
+}
+
+.message.left {
+    color: hsl(276, 55%, 52%);
+    max-width: 60%;
+    background-color: hsla(276, 55%, 52%, 10%);
+    border-bottom-left-radius: 5px;
+}
+
+.message.right {
+    max-width: 60%;
+    align-self: flex-end;
+    /* text-align: end; */
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(271, 15%, 43%);
+    box-shadow: 0 5px 20px hsla(0, 0%, 0%, 10%);
+    border-bottom-right-radius: 5px;
+}
+
+.photos > img {
+    width: 70px;
+    border-radius: 10px;
+    margin-left: .5rem;
+}
+
+.photos {
+    align-self: flex-end;
+    margin: .5rem;
+}
+
+.message.check {
+    background: linear-gradient(90deg,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-bottom-left-radius: 5px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 1rem .5rem;
+}
+
+span.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.checktime {
+    display: grid;
+    grid-template-columns: 1.8rem auto;
+    align-items: center;
+    gap: .5rem
+}
+
+input[type="radio"] {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    border: 1px solid white; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px; 
+    outline: none;
+    margin-left: .3rem;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: white;
+}
+
+.textinput {
+    width: 100%;
+    padding: .5rem;
+    padding-bottom: .8rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+}
+
+input[type="text"]::placeholder {
+    color: hsl(206, 6%, 79%);
+}
+
+input[type="submit"] {
+    position: absolute;
+    border: none;
+    outline: none;
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(271, 36%, 24%);
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    padding: .3rem .6rem;
+    transform: translate(-41px,6px);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.leftobj, .rightobj {
+    position: absolute;
+    width: 40vw;
+    height: 120vh;
+    border-radius: 100rem;
+    overflow: hidden;
+}
+
+.leftobj {
+    z-index: 0;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    transform: translate(-100%, -20%);
+}
+
+.rightobj {
+    z-index: 0;
+    background-color: hsla(276, 55%, 52%, 5%);
+    transform: translate(120%, 20%);
+}
+
+.m1 {
+    transform: translateX(-110%);
+    animation: slideRight .5s ease-in 1s forwards;
+}
+
+.m2 {
+    transform: translateX(-110%);
+    animation: slideRight .5s ease-in 1.2s forwards;
+}
+
+.m3 {
+    transform: translateX(110%);
+    animation: slideLeft .5s ease-in 2s forwards;
+}
+
+.m4 {
+    transform: translateX(110%);
+    animation: slideLeft .5s ease-in 2.3s forwards;
+}
+
+.m5 {
+    transform: translateX(110%);
+    animation: slideLeft .5s ease-in 3s forwards;
+}
+
+.m6 {
+    transform: translateX(-110%);
+    animation: slideRight .5s ease-in 3.3s forwards;
+}
+
+.m7 {
+    transform: translateX(-110%);
+    animation: slideRight .5s ease-in 3.5s forwards;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-110%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .text {
+        text-align: center;
+        padding: 1rem;
+        padding-bottom: 3rem;
+        width: 100%;
+    }
+
+    .text h4 {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .phone {
+        margin-left: 0;
+        scale: 70%;
+    }
+
+    .leftobj {
+        transform: translate(-100%, -50%);
+    }
+
+    .rightobj {
+        transform: translate(120%, 50%);
+    }
+
+    @keyframes appear {
+        0% {
+            scale: 0%
+        }
+    
+        100% {
+            scale: 70%;
+        }
+    }
+}
